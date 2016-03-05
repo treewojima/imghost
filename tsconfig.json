@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "outDir": "./js.atom"
+    },
+    "exclude": [
+        "node_modules",
+        "typings",
+        "js"
+    ],
+    "compileOnSave": true,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
