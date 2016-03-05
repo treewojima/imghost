@@ -1,13 +1,19 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        
+
         ts: {
             build: {
                 options: {
                     target: "es6",
                     fast: "never",
-                    module: "commonjs"
+                    module: "commonjs",
+                    moduleResolution: "node",
+                    removeComments: "true",
+                    sourceMap: "true",
+                    noImplicitAny: "true",
+                    preserveConstEnums: "true",
+                    experimentalDecorators: "true"
                 },
                 src: ["src/**/*.ts", "!node_modules/**/*.ts"],
                 outDir: "js"
@@ -65,4 +71,3 @@ module.exports = function (grunt) {
     grunt.registerTask("default", ["tslint:all", "ts:build"]);
     grunt.registerTask("serve", ["concurrent:watchers"]);
 }
-
